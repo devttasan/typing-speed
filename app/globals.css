@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #16130f;
+  --color-text: #f4ecdd;
+  --color-sub: #8f7e66;
+  --color-accent: #f2a33a;
+  --color-error: #e0705c;
+
+  --font-mono: "JetBrains Mono Variable", ui-monospace, monospace;
+
+  --animate-blink: blink 1s step-end infinite;
+  --animate-draw: draw 1.2s ease-out forwards;
+  --animate-fade-in: fade-in 300ms ease-out;
+
+  @keyframes blink {
+    50% { opacity: 0; }
+  }
+  @keyframes draw {
+    from { stroke-dasharray: 1; stroke-dashoffset: 1; }
+    to { stroke-dasharray: 1; stroke-dashoffset: 0; }
+  }
+  @keyframes fade-in {
+    from { opacity: 0; transform: translateY(8px); }
+  }
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+}
